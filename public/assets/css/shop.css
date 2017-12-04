@@ -173,4 +173,7 @@
         font-size: 1.5vw;
         margin-left: 1vw;
     }
+    .shopMenu{
+        height: 180vh
+    }
 }

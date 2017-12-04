@@ -48,17 +48,19 @@ app.post("/recipes", function(req, res){
             console.log("Something went wrong");
         } else {
             console.log("Message sent: " + info.response);
-            console.log("Everything worked fine!")
+            console.log("Everything worked fine!");
         }
     });
 
 });
 
 app.get("/news", function(req, res){
-    res.sendFile(path.join(__dirname, "public/news.html"))
+    res.sendFile(path.join(__dirname, "public/news.html"));
 });
 
-
+app.get("/about", function(req, res){
+    res.sendFile(path.join(__dirname, "public/about.html"));
+});
 
 
 app.listen(process.env.PORT || 3000, function(){
