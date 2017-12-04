@@ -66,6 +66,7 @@
     margin-left: 3vw;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 @media (min-width: 768px){
     .shopMenu{
@@ -95,12 +96,8 @@
     .header{
         padding-top: 0;
         width: 100vw;
-<<<<<<< HEAD
-        
-=======
         height: 190vh;
         color: white;
->>>>>>> 4721547d29dfcb5b914e455e3460246f2a85eb8d
         background-image: url("../images/shop.jpg");
         background-size: auto;
         background-repeat: no-repeat;
@@ -144,5 +141,36 @@
     }
     .shopMenu{
         height: 300vh
+    }
+}
+@media (min-width: 1600px){
+    .header{
+        height: 161.5vh;
+    }
+    .itemImg{
+        width: 20vw;
+        height: 15vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 8%;
+    }
+    .shopItem{
+        border-radius: 7%;
+        width: 20%;
+        margin-left: 6vw;
+        margin-right: 7vw;
+        height: 18.7vw;
+    }
+    .itemButtons input{
+        font-size: 1.5vw;
+        padding: 0.8vw;
+        margin-left: 1vw;
+    
+    }
+    .itemButtons button{
+        padding: 0.8vw;
+        font-size: 1.5vw;
+        margin-left: 1vw;
     }
 }

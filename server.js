@@ -27,7 +27,7 @@ app.post("/recipes", function(req, res){
         service: "gmail",
         auth: {
             user: "nplatonovbusiness@gmail.com",
-            pass: "" // Put password here
+            pass: "starnet1" // Put password here
         }
     });
     var mailOptions = {
@@ -54,6 +54,9 @@ app.post("/recipes", function(req, res){
 
 });
 
+app.get("/news", function(req, res){
+    res.sendFile(path.join(__dirname, "public/news.html"))
+});
 
 
 
