@@ -248,8 +248,7 @@ h2{
     .header{
         padding-top: 0;
         width: 100vw;
-        height: 200vh;
-        color: white;
+        
         background-image: url("../images/shop.jpg");
         background-size: auto;
         background-repeat: no-repeat;
