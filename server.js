@@ -11,8 +11,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
-    'client_id': 'AedyObvLcUxmyG9n_vYnE_w0svFzKH1OYzOwqhC-cqT-0c06ctYl4oTqXFKMrVwC5EKC_7v_1LFEcSVp',
-    'client_secret': 'ENAq-RxfhaBrfmywE_SgUACWcwJmPZcXNQTm3qXECuapUDDHg7klAYkjmR1bAK_Eya4X7L14tRRNbLIU'
+    'client_id': '',
+    'client_secret': ''
   });
 
 app.get("/", function(req, res){

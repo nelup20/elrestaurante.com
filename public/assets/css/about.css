@@ -126,7 +126,7 @@
         transition: all 1s;
     }
 }
-@media  (min-width: 1600px) {
+@media  (min-width: 1440px) {
     .aboutPair div{
         font-size: 1.5vw;
     }
