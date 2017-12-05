@@ -2,11 +2,18 @@ var express = require("express"),
     path = require("path"),
     app = express(),
     bodyParser = require("body-parser"),
-    nodemailer = require("nodemailer"); 
+    nodemailer = require("nodemailer"),
+    paypal = require("paypal-rest-sdk"); 
 
 app.set("view engine", "html");
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended: true}));
+
+paypal.configure({
+    'mode': 'sandbox', //sandbox or live
+    'client_id': 'AedyObvLcUxmyG9n_vYnE_w0svFzKH1OYzOwqhC-cqT-0c06ctYl4oTqXFKMrVwC5EKC_7v_1LFEcSVp',
+    'client_secret': 'ENAq-RxfhaBrfmywE_SgUACWcwJmPZcXNQTm3qXECuapUDDHg7klAYkjmR1bAK_Eya4X7L14tRRNbLIU'
+  });
 
 app.get("/", function(req, res){
     res.sendFile("/index.html");
@@ -14,6 +21,49 @@ app.get("/", function(req, res){
 
 app.get("/shop", function(req, res){
     res.sendFile(path.join(__dirname, 'public/shop.html'));
+});
+
+app.post("/buy", function(req, res){
+
+    var create_payment_json = {
+        "intent": "sale",
+        "payer": {
+            "payment_method": "paypal"
+        },
+        "redirect_urls": {
+            "return_url": "http://localhost:3000/shop",
+            "cancel_url": "http://localhost:3000/"
+        },
+        "transactions": [{
+            "item_list": {
+                "items": [{
+                    "name": "Souvenir",
+                    "sku": "001",
+                    "price": req.body.price,
+                    "currency": "USD",
+                    "quantity": req.body.quantity
+                }]
+            },
+            "amount": {
+                "currency": "USD",
+                "total": req.body.price * req.body.quantity
+            },
+            "description": "Enjoy El Restaurante's Souvenir!."
+        }]
+    };
+    
+    
+    paypal.payment.create(create_payment_json, function (error, payment) {
+        if (error) {
+            throw error;
+        } else {
+            for( var i = 0; i < payment.links.length; i++){
+                if(payment.links[i].rel === "approval_url"){
+                    res.redirect(payment.links[i].href);
+                }
+            }
+        }
+    });
 });
 
 app.get("/recipes", function(req, res){

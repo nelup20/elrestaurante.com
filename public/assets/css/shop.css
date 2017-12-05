@@ -35,24 +35,20 @@
     border-bottom-right-radius: 4%;
 }
 
-.itemButtons{
+.itemButtons form{
     display: flex;
     justify-content: center;
     align-items: center;
    
 }
-.itemPrice{
-    text-align: center;
-    font-family: 'Kaushan Script', cursive;
-    color: rgba(0, 0, 0, 0.589);
-}
-.itemButtons * {
+
+.itemButtons form * {
     flex: 1;
 }
 .itemButtons input{
-    padding: 1.8vw;
-    margin-left: 2.5vw;
-    padding-left: 0;
+    padding: 1.2vh;
+    margin-left: 0.5vw;
+    padding-left: 2vw;
     border-radius: 5px;
     text-align: center;
     border: 0.5px solid rgba(128, 128, 128, 0.192);
@@ -62,8 +58,9 @@
     font-family: 'Roboto', sans-serif;
     color: white;
     background-color: #5C9A4F;
-    padding: 2vw;
+    padding: 1.2vh;
     margin-left: 3vw;
+    margin-right: 0.5vw;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -74,8 +71,7 @@
     }
     .itemButtons input{
         padding: 2vw;
-        margin-left: 2.5vw;
-        padding-left: 0;
+        padding-left: 2vw;
         border-radius: 9px;
         text-align: center;
         border: 0.5px solid rgba(128, 128, 128, 0.192);
@@ -85,8 +81,7 @@
         font-family: 'Roboto', sans-serif;
         color: white;
         background-color: #5C9A4F;
-        padding: 2.8vw;
-        margin-left: 3vw;
+        padding: 2.8vw;      
         border: none;
         border-radius: 9px;
         font-size: 3.2vw
@@ -125,10 +120,6 @@
         height: 30vw;
         border-bottom-left-radius: 4%;
         border-bottom-right-radius: 4%;
-    }
-    
-    .itemButtons * {
-        flex: 1;
     }
     .itemButtons input{
         font-size: 2vw;
