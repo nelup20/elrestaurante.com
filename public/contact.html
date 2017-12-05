@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Roboto" rel="stylesheet">
-    <script src="https://use.fontawesome.com/f3341d973d.js"></script>
     <title>El Restaurante</title>
     <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-icon-60x60.png">
@@ -24,8 +22,10 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="./assets/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Roboto" rel="stylesheet">
+    <script src="https://use.fontawesome.com/f3341d973d.js"></script>
     <link rel="stylesheet" href="./assets/css/navBar.css">
-    <link rel="stylesheet" href="./assets/css/recipes.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
 </head>
 <body>
     <div class="header">
@@ -37,29 +37,19 @@
         <div class="navigationLinks">
             <ul>
                 <li><a href="/shop">SHOP</a></li>
-                <li id="navCurrentLink"><a href="/recipes">RECIPES</a></li>
+                <li><a href="/recipes">RECIPES</a></li>
                 <li><a href="/news">NEWS</a></li>
                 <li><a href="/about">ABOUT</a></li>
-                <li><a href="/contact">CONTACT</a></li>
+                <li id="navCurrentLink"><a href="/contact">CONTACT</a></li>
             </ul>
         </div>       
     </div>
 </div>
-<div class="recipesTitleHeader">
-    <h1>Recipes</h1>
+<div class="contactTitleHeader">
+    <h1>Contact</h1>
     </div>
 </div>
-<div class="recipeHeader">
-    <h3>FREE RECIPE BOOK VIA EMAIL</h3>
-</div>
-<div class="divForm">
-    <form action="/recipes" method="POST">
-        <input type="email" placeholder="john.doe@gmail.com" name="email">
-        <button id="sendBtn">SEND RECIPES</button>
-    </form>
-</div>
 
-</body>
 <script src="./assets/js/navBar.js"></script>
-<script src="./assets/js/recipes.js"></script>
+</body>
 </html>

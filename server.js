@@ -27,7 +27,7 @@ app.post("/recipes", function(req, res){
         service: "gmail",
         auth: {
             user: "nplatonovbusiness@gmail.com",
-            pass: "starnet1" // Put password here
+            pass: "" // Put password here
         }
     });
     var mailOptions = {
@@ -62,6 +62,9 @@ app.get("/about", function(req, res){
     res.sendFile(path.join(__dirname, "public/about.html"));
 });
 
+app.get("/contact", function(req, res){
+    res.sendFile(path.join(__dirname, "public/contact.html"));
+});
 
 app.listen(process.env.PORT || 3000, function(){
     console.log("SERVER STARTED ON PORT 3000")
