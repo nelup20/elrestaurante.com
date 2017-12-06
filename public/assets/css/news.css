@@ -75,6 +75,14 @@
         font-size: 2vw
     }
 }
+@media (min-width: 1340px) and (max-width: 1375px){
+    .newsArticle a{
+        height: 50vh;
+    }
+    .articleTitle{
+        margin-top: 30vh;
+    }
+}
 @media (min-width: 1920px){
     .header{
         height: 110vh;
