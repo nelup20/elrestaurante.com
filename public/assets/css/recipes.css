@@ -72,15 +72,10 @@
     }
 }
 @media (min-width: 1280px){
-    #sendBtn{
-        border-radius: 8px;
-        height: 7vw;
-        font-size: 2.5vw;
-    }
     .divForm form input{
         border-radius: 8px;
-        font-size: 2.5vw;
-        height: 7vw
+        font-size: 18px;
+        height: 40px
     
     }
     .divForm form{
@@ -99,7 +94,7 @@
         font-size: 2vw;
     }
     .divForm form input{ 
-        font-size: 2vw;
+        font-size: 15px;
         height: 5vw
     
     }
