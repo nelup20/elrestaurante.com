@@ -1,12 +1,11 @@
 .header{
     padding-top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     color: white;
     background-image: url("../images/contact1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-x: -50vw
 }
 .contactTitleHeader h1{
     font-family: 'Kaushan Script', cursive;
@@ -19,7 +18,7 @@
 }
 .addressMap{
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
 }
 
 .openingHours{
@@ -63,7 +62,8 @@
 @media (min-width: 1280px){
     .header{
         background-position-x: 0;
-        height: 120vh;
+        background-position-y: -100px;
+        height: 90vh;
     }
     .openingHours h3{
         font-size: 3.5vw
